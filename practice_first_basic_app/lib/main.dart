@@ -5,11 +5,21 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(MaterialApp(
     home: Center(
-      child: Text("Abdullah"),
+      child: Image(image: AssetImage('images/cat.png')),
     ),
   ));
 }
 
+/*
+void main() {
+  runApp(MaterialApp(
+    home: Center(
+      child: Image(image: AssetImage('images/cat.png')),
+    ),
+  ));
+}
+
+ */
 //void main() => runApp(MyApp());
 
 // void main() {
