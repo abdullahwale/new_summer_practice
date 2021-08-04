@@ -1,13 +1,112 @@
-import 'dart:html';
-
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MaterialApp(
-    home: Center(
-      child: Image(image: AssetImage('images/cat.png')),
+  runApp(
+    MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.red,
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            Card(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  const ListTile(
+                    leading: Icon(Icons.check),
+                    title: Text('TITLE'),
+                    subtitle: Text('SUBTITLE'),
+                  ),
+                  ButtonBar(
+                    children: <Widget>[
+                      FlatButton(
+                        child: const Text('BTN1'),
+                        onPressed: () {/* ... */},
+                      ),
+                      FlatButton(
+                        child: const Text('BTN2'),
+                        onPressed: () {/* ... */},
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              alignment: Alignment.center,
+              height: 100,
+              width: 100,
+              child: Text(
+                "Flutter",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
+              color: Colors.green,
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Container(
+              alignment: Alignment.center,
+              height: 100,
+              width: 100,
+              child: Text(
+                "Flutter",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
+              color: Colors.green,
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Container(
+              alignment: Alignment.center,
+              height: 100,
+              width: 100,
+              child: Text(
+                "Flutter",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
+              color: Colors.green,
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Row(
+              children: [
+                Container(
+                  color: Colors.blue,
+                  height: 50.0,
+                  width: 50.0,
+                ),
+                Icon(Icons.adjust, size: 50.0, color: Colors.pink),
+                Icon(
+                  Icons.adjust,
+                  size: 50.0,
+                  color: Colors.purple,
+                ),
+                Icon(
+                  Icons.adjust,
+                  size: 50.0,
+                  color: Colors.greenAccent,
+                ),
+                Container(
+                  color: Colors.orange,
+                  height: 50.0,
+                  width: 50.0,
+                ),
+                Icon(
+                  Icons.adjust,
+                  size: 50.0,
+                  color: Colors.cyan,
+                ),
+              ],
+            )
+          ],
+        ),
+      ),
     ),
-  ));
+  );
 }
 
 /*
@@ -45,8 +144,7 @@ void main() {
 //       ),
 //     );
 //   }
-// }
-
+//
 /*
 class MyApp extends StatelessWidget {
   //@override
