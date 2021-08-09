@@ -37,7 +37,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     super.initState();
     _animationController =
         AnimationController(vsync: this, duration: Duration(seconds: 3));
-    _tween = new Tween<double>(
+    _tween = Tween<double>(
         begin: rng.nextInt(3).toDouble(), end: rng.nextInt(3).toDouble());
     _animationController.forward();
   }
