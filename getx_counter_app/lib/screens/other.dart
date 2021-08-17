@@ -10,15 +10,17 @@ class OtherScreen extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text("Clicks ! ${_controller.count.value}"),
+          Center(child: Text("Clicks ! ${_controller.count.value}")),
           SizedBox(
             height: 20,
           ),
-          ElevatedButton(
-              onPressed: () {
-                Get.back();
-              },
-              child: Text("Go Back to Main"))
+          Center(
+            child: ElevatedButton(
+                onPressed: () {
+                  Get.back();
+                },
+                child: Text("Go Back to Main")),
+          )
         ],
       ),
     );
