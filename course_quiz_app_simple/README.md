@@ -1,16 +1,4 @@
-# course_quiz_app_simple
+# Step 01 Start Up Code Image
 
-A new Flutter application.
+![part 01](https://user-images.githubusercontent.com/39946504/136501107-8d7b4fc5-5525-410c-bb09-7aa4656a567c.PNG)
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
