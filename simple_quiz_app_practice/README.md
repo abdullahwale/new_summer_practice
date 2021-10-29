@@ -1,4 +1,4 @@
-# simple_quiz_app_practice
+# Simple_Quiz_App
 
 Video of Functions Linked | Screen Shot 02
 ------------- | -------------
