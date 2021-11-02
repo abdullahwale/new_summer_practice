@@ -10,13 +10,13 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  var questionIndex = 0;
-  void answerQuestion() {
+  var _questionIndex = 0;
+  void _answerQuestion() {
     setState(() {
-      questionIndex = questionIndex + 1;
+      _questionIndex = _questionIndex + 1;
     });
 
-    print(questionIndex);
+    print(_questionIndex);
   }
 
   Widget build(BuildContext context) {
@@ -32,7 +32,7 @@ class _MyAppState extends State<MyApp> {
         ),
         body: Column(
           children: [
-            Text(questions[questionIndex]),
+            Text(questions[_questionIndex]),
             SizedBox(
               height: 10.0,
             ),
@@ -40,7 +40,7 @@ class _MyAppState extends State<MyApp> {
               child: Text('Answer 01'),
               color: Color(0xFF801E48),
               textColor: Colors.white,
-              onPressed: answerQuestion,
+              onPressed: _answerQuestion,
             ),
             SizedBox(
               height: 10.0,
@@ -69,7 +69,7 @@ class _MyAppState extends State<MyApp> {
               child: Text('Answer 01'),
               color: Color(0xFF801E48),
               textColor: Colors.white,
-              onPressed: answerQuestion,
+              onPressed: _answerQuestion,
             ),
           ],
         ),
