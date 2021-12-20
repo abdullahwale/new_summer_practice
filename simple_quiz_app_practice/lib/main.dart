@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'question.dart';
+
 main() {
   runApp(MyApp());
 }
@@ -11,6 +13,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   var _questionIndex = 0;
+
   void _answerQuestion() {
     setState(() {
       _questionIndex = _questionIndex + 1;
@@ -32,12 +35,16 @@ class _MyAppState extends State<MyApp> {
         ),
         body: Column(
           children: [
-            Text(questions[_questionIndex]),
+            Question(
+              questions[_questionIndex],
+            ),
             SizedBox(
               height: 10.0,
             ),
             MaterialButton(
-              child: Text('Answer 01'),
+              child: Question(
+                questions[_questionIndex],
+              ),
               color: Color(0xFF801E48),
               textColor: Colors.white,
               onPressed: _answerQuestion,
@@ -46,7 +53,9 @@ class _MyAppState extends State<MyApp> {
               height: 10.0,
             ),
             MaterialButton(
-              child: Text('Answer 01'),
+              child: Question(
+                questions[_questionIndex],
+              ),
               color: Color(0xFF801E48),
               textColor: Colors.white,
               onPressed: () => print('Answer 1 Selection!'),
@@ -55,7 +64,9 @@ class _MyAppState extends State<MyApp> {
               height: 10.0,
             ),
             MaterialButton(
-              child: Text('Answer 01'),
+              child: Question(
+                questions[_questionIndex],
+              ),
               color: Color(0xFF801E48),
               textColor: Colors.white,
               onPressed: () {
@@ -66,7 +77,9 @@ class _MyAppState extends State<MyApp> {
               height: 10.0,
             ),
             MaterialButton(
-              child: Text('Answer 01'),
+              child: Question(
+                questions[_questionIndex],
+              ),
               color: Color(0xFF801E48),
               textColor: Colors.white,
               onPressed: _answerQuestion,

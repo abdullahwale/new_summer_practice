@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:simple_quiz_app_practice/question.dart';
 
 main() {
   runApp(MyApp());
@@ -32,12 +33,16 @@ class _MyAppState extends State<MyApp> {
         ),
         body: Column(
           children: [
-            Text(questions[_questionIndex]),
+            Question(
+              questions[_questionIndex],
+            ),
             SizedBox(
               height: 10.0,
             ),
             MaterialButton(
-              child: Text('Answer 01'),
+              child: Question(
+                questions[_questionIndex],
+              ),
               color: Color(0xFF801E48),
               textColor: Colors.white,
               onPressed: _answerQuestion,
@@ -46,16 +51,20 @@ class _MyAppState extends State<MyApp> {
               height: 10.0,
             ),
             MaterialButton(
-              child: Text('Answer 01'),
+              child: Question(
+                questions[_questionIndex],
+              ),
               color: Color(0xFF801E48),
               textColor: Colors.white,
-              onPressed: () => print('Answer 1 Selection!'),
+              //onPressed: () => print('Answer 1 Selection!'),
             ),
             SizedBox(
               height: 10.0,
             ),
             MaterialButton(
-              child: Text('Answer 01'),
+              child: Question(
+                questions[_questionIndex],
+              ),
               color: Color(0xFF801E48),
               textColor: Colors.white,
               onPressed: () {
@@ -66,7 +75,9 @@ class _MyAppState extends State<MyApp> {
               height: 10.0,
             ),
             MaterialButton(
-              child: Text('Answer 01'),
+              child: Question(
+                questions[_questionIndex],
+              ),
               color: Color(0xFF801E48),
               textColor: Colors.white,
               onPressed: _answerQuestion,
