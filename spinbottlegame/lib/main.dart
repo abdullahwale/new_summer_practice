@@ -1,5 +1,4 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
 
 void main() {
@@ -7,7 +6,6 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -28,7 +26,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   var lastPosition = 0.0;
-  var random = new Random();
+  var random = Random();
 
   AnimationController _animationController;
   Animation _animation;
@@ -52,6 +50,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         children: [
           Container(
             height: MediaQuery.of(context).size.height,
+            width: MediaQuery.of(context).size.width,
             child: Image.asset(
               "images/floor.jpg",
               fit: BoxFit.fill,
@@ -61,7 +60,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             child: Container(
               child: RotationTransition(
                 turns: Tween(begin: 0.0, end: getRandom()).animate(
-                    new CurvedAnimation(
+                    CurvedAnimation(
                         parent: _animationController, curve: Curves.linear)),
                 child: GestureDetector(
                   onTap: () {
