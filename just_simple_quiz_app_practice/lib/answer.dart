@@ -9,26 +9,24 @@ class Answer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        width: double.infinity,
-        child: TextButton(
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        SizedBox(
+          height: 10,
+        ),
+        TextButton(
           onPressed: selectHandler,
           style: TextButton.styleFrom(
             primary: Colors.white,
-            backgroundColor: Colors.lightBlue, // Background Color
+            backgroundColor: Colors.amber, // Background Color
           ),
           child: Text(
             answerText,
-            style: TextStyle(fontSize: 12),
+            style: TextStyle(fontSize: 20),
           ),
-        ));
+        )
+      ],
+    );
   }
 }
-/*
-ElevatedButton(
-        color: Colors.blue,
-        textColor: Colors.white,
-        child: Text(answerText),
-        onPressed: selectHandler,
-      ),
- */
