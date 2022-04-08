@@ -1,69 +1,48 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
-import 'package:splashscreen/splashscreen.dart';
 
-void main() => runApp(XylophoneApp());
-
-class MyApp extends StatefulWidget {
-  @override
-  _MyAppState createState() => new _MyAppState();
+void main() {
+  runApp(MyXylophoneApp());
 }
 
-class _MyAppState extends State<MyApp> {
-  @override
-  Widget build(BuildContext context) {
-    return SplashScreen(
-      seconds: 40,
-      navigateAfterSeconds: XylophoneApp(),
-      title: Text(
-        'Welcome In SplashScreen',
-        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
-      ),
-      image: Image.network(
-          'https://flutter.io/images/catalog-widget-placeholder.png'),
-      backgroundColor: Colors.white,
-      loaderColor: Colors.red,
-    );
-  }
-}
-
-class XylophoneApp extends StatelessWidget {
-  void playSound(int soundNumber) {
+//CTRL + ALt + L
+class MyXylophoneApp extends StatelessWidget {
+  void myFunction(int num, String name){
     final player = AudioCache();
-    player.play('note$soundNumber.wav');
+    player.play('note$num.wav');
+    print(name);
   }
 
-  Expanded buildKey({Color color, int soundNumber}) {
-    return Expanded(
-      child: FlatButton(
-        color: color,
-        onPressed: () {
-          playSound(soundNumber);
-        },
+  Expanded Create_Button(int number,String name,String buttonText,Color colur){
+    return Expanded(child: ElevatedButton(
+      onPressed: (){
+        myFunction(number,name);
+      },
+      child: Text(buttonText),
+      style: ElevatedButton.styleFrom(
+        primary: colur, // This is what you need!
       ),
-    );
+    ),);
   }
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.black,
-        body: SafeArea(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: <Widget>[
-              buildKey(color: Colors.red, soundNumber: 1),
-              buildKey(color: Colors.orange, soundNumber: 2),
-              buildKey(color: Colors.yellow, soundNumber: 3),
-              buildKey(color: Colors.green, soundNumber: 4),
-              buildKey(color: Colors.teal, soundNumber: 5),
-              buildKey(color: Colors.blue, soundNumber: 6),
-              buildKey(color: Colors.purple, soundNumber: 7),
-            ],
-          ),
+        appBar: AppBar(
+          title: Text("My Xylophone App"),
+          centerTitle: true,
         ),
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Create_Button(1,"First","XyloApp",Colors.green),
+            Create_Button(2,"Second","XyloApp",Colors.yellow),
+            Create_Button(3,"Second","XyloApp",Colors.blue),
+            Create_Button(4,"Second","XyloApp",Colors.black),
+            Create_Button(5,"Second","XyloApp",Colors.purple),
+            Create_Button(6,"Second","XyloApp",Colors.pink),
+            Create_Button(7,"Second","XyloApp",Colors.red),
+        ],),
       ),
     );
   }
